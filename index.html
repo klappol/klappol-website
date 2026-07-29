@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>klappol — Hamarosan</title>
+<style>
+  :root{
+    --green:  #9cc66c;
+    --orange: #f24f26;
+    --blue:   #7f94c3;
+    --black:  #070707;
+  }
+  *{ box-sizing: border-box; }
+  html, body{ margin: 0; height: 100%; }
+  body{
+    background: var(--black);
+    font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cs-text{
+    font-weight: 800;
+    font-size: clamp(2rem, 8vw, 5.5rem);
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    padding: 0 1.5rem;
+  }
+  .cs-text span{ display: inline-block; }
+  .c1{ color: var(--green); }
+  .c2{ color: var(--orange); }
+  .c3{ color: var(--blue); }
+
+  .cs-cursor{
+    width: 0.62em;
+    height: 0.12em;
+    background: var(--orange);
+    margin-left: 0.08em;
+    margin-bottom: -0.02em;
+    vertical-align: 0.02em;
+    animation: blink 1s steps(1) infinite;
+  }
+  @keyframes blink{
+    0%, 49%   { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .cs-cursor{ animation: none; }
+  }
+</style>
+</head>
+<body>
+
+  <h1 class="cs-text">
+    <span class="c1">C</span><span class="c2">o</span><span class="c3">m</span><span class="c1">i</span><span class="c2">n</span><span class="c3">g</span> <span class="c1">s</span><span class="c2">o</span><span class="c3">o</span><span class="c1">n</span><span class="cs-cursor"></span>
+  </h1>
+
+</body>
+</html>
